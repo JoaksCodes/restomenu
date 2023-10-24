@@ -1,0 +1,23 @@
+.video-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .video-item {
+    flex: 1;
+  }
+  .video-element {
+    width: 100%; 
+    max-height: 600px; 
+  }
+  @media (max-width: 576px) {
+    .video-grid {
+      flex-direction: column; 
+    }
+    .video-item {
+      flex: 0 0 100%; 
+    }
+    .video-item:nth-child(3) {
+      display: block;
+}
+}

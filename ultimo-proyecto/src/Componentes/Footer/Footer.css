@@ -1,0 +1,23 @@
+  .footer {
+    display: flex; 
+    justify-content: space-around;  
+    padding: 20px;   
+    background-color: #a2e444;
+    color: black; 
+  }
+  
+  .footer-link {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .footer-link:hover {
+    color: black;
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media screen and (max-width: 768px) {
+    .footer {
+      flex-direction: column; 
+}
+}
