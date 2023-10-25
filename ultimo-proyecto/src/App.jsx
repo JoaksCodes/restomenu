@@ -9,6 +9,7 @@ import Servicios from './Componentes/Home/Servicios';
 import Videos from './Componentes/Home/Videos';
 import Footer from './Componentes/Footer/Footer';
 import SobreNosotros from './Componentes/SobreNosotros/SobreNosotros';
+import Error404 from './Componentes/error404/Error404';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
       </>
       }></Route>
       <Route path='/SobreNos' element={<SobreNosotros/>} ></Route>
+      <Route path='*' element={<Error404/>} ></Route>
 
     </Routes>
     <Footer/>
