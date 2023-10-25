@@ -21,3 +21,6 @@
       flex-direction: column; 
 }
 }
+.img-fluid{
+  border-radius: 100%;
+}
