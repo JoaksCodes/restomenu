@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="footer">
   <div className="container row">
     <div className="col-md-4">
-      <img src="../src/assets/comida1.jpg" alt="" style={{ width: "100px", height: "100px" }} className='img-fluid' />
+      <img src="../src/assets/logo.jpg" alt="" style={{ width: "100px", height: "100px" }} className='img-fluid' />
     </div>
 
     <div className="col-md-4">

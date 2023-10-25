@@ -27,7 +27,7 @@ function App() {
       <Servicios/>
       </>
       }></Route>
-      <Route path='/SobreNos' element={<SobreNosotros/>} ></Route>
+      <Route path='/SobreNosotros' element={<SobreNosotros/>} ></Route>
 
     </Routes>
     <Footer/>
