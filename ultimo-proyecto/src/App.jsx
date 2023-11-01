@@ -9,6 +9,8 @@ import Servicios from './Componentes/Home/Servicios';
 import Videos from './Componentes/Home/Videos';
 import Footer from './Componentes/Footer/Footer';
 import SobreNosotros from './Componentes/SobreNosotros/SobreNosotros';
+import Carrito from './Componentes/Carrito/Carrito';
+import FoodPage from './Componentes/FoodPage/FoodPage';
 
 function App() {
 
@@ -28,8 +30,10 @@ function App() {
       </>
       }></Route>
       <Route path='/SobreNosotros' element={<SobreNosotros/>} ></Route>
-
+      <Route path='/Carrito' element={<Carrito/>}></Route>
+      <Route path='/FoodPage' element={<FoodPage/>}></Route>
     </Routes>
+  
     <Footer/>
 
     </BrowserRouter>
