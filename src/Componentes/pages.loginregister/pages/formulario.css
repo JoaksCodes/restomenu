@@ -18,11 +18,12 @@ background-size: cover;
 
 .contenedorformu{
     position: relative;
+    
     width: 400px;
     backdrop-filter: blur(15px);
     border: 2px solid rgba(7, 6, 6, 0.6);
     border-radius:20px ;
-    height: 450px;
+    height:  auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,10 +77,13 @@ background-size: cover;
 
  }
 
- 
+ h2{
+    margin: 15px 3px;
+ }
  
  button{
     width: 100%;
+    margin: 15px  3px;
     height: 45px;
     background: #fff;
     border-radius: 40px;

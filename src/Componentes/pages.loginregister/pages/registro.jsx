@@ -94,8 +94,21 @@ e.preventDefault();
                  required
                   />
                </div>
+               <div className="input-contenedor"> 
+            
+            <label htmlFor="">Repetir contraseña</label> 
+                <input type="password" 
+                name="password"
+                 id="password"  
+                onChange={onInputChange}
+                autoComplete="off"
+                 value={password}
+                
+                 required
+                  />
+               </div>
 
-               <button>Registrarse</button>
+               <button >Registrarse</button>
             </form>
 
           
