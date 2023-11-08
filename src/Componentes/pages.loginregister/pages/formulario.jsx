@@ -4,6 +4,8 @@ import ("./formulario.css")
 import {  useNavigate } from "react-router-dom";
 import React from "react";
 import Footer from '../../Footer/Footer';
+import Navbarrr from './Navbarrr';
+import { Container } from 'react-bootstrap';
 
 
 
@@ -41,9 +43,11 @@ const onLogin = e => {
 
     return (
         <>
+        <Navbarrr/>
         <section className="secformu">
 
-        <div className="contenedorformu " >
+<Container className="contenedorformu ">
+        
 
                 <div className="formulariologin">
                    
@@ -96,7 +100,7 @@ const onLogin = e => {
 
                 </div>
 
-            </div>
+                </Container>
 
         </section>
 

@@ -1,10 +1,14 @@
 
+import { Navbar } from "react-bootstrap"
 import Footer from "../../Footer/Footer"
 import Tarjetas from "../../Homee/Franquicia"
 import Menu from "../../Homee/Menu"
 import Presentacion from "../../Homee/Presentacion"
 import Servicios from "../../Homee/Servicios"
 import Videos from "../../Homee/Videos"
+import BasicExample from "../../Navbar2/Navbar2"
+import Navbarrr2 from "../../Navbar2/Navbar2"
+import Navbar2 from "../../Navbar2/Navbar2"
 
 
 function Home (){
@@ -12,9 +16,7 @@ function Home (){
 
     return(
 <>
-<h1>
-    Hola nose que estoy haciendo desde la home principal
-</h1>
+<Navbar2/>
 
 <Presentacion/>
 <Videos/>

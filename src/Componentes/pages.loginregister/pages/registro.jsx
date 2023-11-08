@@ -3,6 +3,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useForm } from './hook/useForm';
 import Footer from '../../Footer/Footer';
+import Navbarrr from './Navbarrr';
 import ("./formulario.css")
 
 const Registro = () => {
@@ -39,6 +40,8 @@ e.preventDefault();
   return (
 
         <>
+
+        <Navbarrr/>
         <section className='secformu'>
 
             <div className="contenedorformu">

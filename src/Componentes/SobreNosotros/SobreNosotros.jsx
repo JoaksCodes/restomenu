@@ -1,9 +1,14 @@
 import React from 'react'
 import './SobreNosotros.css'
 
+
+import Navbar2 from '../Navbar2/Navbar2'
+import Footer from '../Footer/Footer'
+
 const SobreNosotros = () => {
   return (
     <>
+  <Navbar2/>
        <section>
       <div className="container">
         <h1 className="text-center">Sobre Nosotros</h1>
@@ -73,22 +78,11 @@ const SobreNosotros = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-6 col-lg-4 mb-3">
-            <div className="card">
-              <img
-                className="card-img-top"
-                src="../src/assets/lucas-foto.webp"
-                alt="Imagen 5"
-              />
-              <div className="card-body">
-                <h5 className="card-title">Lucas Ibañez</h5>
-                <p className="card-text">Desarrollador full stack</p>
-              </div>
-            </div>
-          </div>
+      
         </div>
       </div>
     </section>
+    <Footer/>
     </>
 
   )
