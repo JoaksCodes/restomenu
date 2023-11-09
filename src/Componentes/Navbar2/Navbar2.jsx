@@ -38,6 +38,8 @@ const {state} = useLocation()
           <span className="username">
             {state?.name}
            </span>
+           <Link to="" className="btn-iniciar" >Contactos</Link>
+           <Link to="" className="btn-iniciar" >Franquicias</Link>
            <Link to="/Sobrenosotros" className="btn-iniciar">Sobre Nosotros</Link>
              <Link to="/" className="btn-iniciar" >Cerrar sesion</Link>
              </div>
