@@ -19,16 +19,13 @@ const Registro = () => {
   })
 
 const onregister =(e)=>
-{
-
-
-e.preventDefault();
+{e.preventDefault();
 
 
     navigate('/Homeprincipal', {
         replace: true,
         state: {
-            logged:true,
+            logged:true ,
             
         },
 

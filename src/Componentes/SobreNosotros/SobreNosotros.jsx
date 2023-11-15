@@ -1,20 +1,13 @@
 import React from 'react'
 import './SobreNosotros.css'
-
-
-import Navbar2 from '../pages.loginregister/pages/Navbar2/Navbar2'
 import Footer from '../Footer/Footer'
 
-const SobreNosotros = () => {
-  OnresetForm();
+function Sobrenosotros  () {
+
   return (
     <>
- 
- 
 
-
-
-       <section>
+       <section >
       <div className="container">
         <h1 className="text-center">Sobre Nosotros</h1>
         <h3 className="text-center">Los pilares que nos caracterizan</h3>
@@ -91,6 +84,12 @@ const SobreNosotros = () => {
     </>
 
   )
+
 }
 
-export default SobreNosotros
+
+
+ 
+
+
+export default Sobrenosotros

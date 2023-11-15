@@ -25,37 +25,26 @@ const {state} = useLocation()
         </Container>
      </Link>
      
-     
-
-
 {/* //en el nav pongo link con la primera letra mayucula ya que si pongo to y pongo el nombre que le puse a la ruta para iniciar sesion que seria el login me llevara al formulario de registro */}
    
 
       
         {state?.logged ? (
         <div className="user" >
-
-   
-<Link to="" className="btn-iniciar" >Contactos</Link>
+           <Link to="" className="btn-iniciar" >Contactos</Link>
            <Link to="" className="btn-iniciar" >Franquicias</Link>
            <Link to="/Sobrenosotros" className="btn-iniciar">Sobre Nosotros</Link>
              <Link to="/" className="btn-iniciar" >Cerrar sesion</Link>
-   
-    
-
-
-
-
              </div>
 
         ): (
 
-          <nav>
+                 <nav>
       
                 <Link to="/Login" className="btn-iniciar">Iniciar sesion</Link>
-                        <Link to="/registro" className="btn-iniciar">Registrarse</Link>
+                 <Link to="/registro" className="btn-iniciar">Registrarse</Link>
 
-                        </nav>
+               </nav>
         
         )}
       
