@@ -1,7 +1,9 @@
 import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Approuter from './Componentes/router/Approuter';
+
+
 
 function App() {
 
@@ -11,7 +13,11 @@ function App() {
 
 
 <div>
-  <Approuter/>
+
+{/* <Admi/> */}
+
+
+<Approuter/> 
 </div>
 
 

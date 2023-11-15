@@ -6,9 +6,8 @@ import Menu from "../../Homee/Menu"
 import Presentacion from "../../Homee/Presentacion"
 import Servicios from "../../Homee/Servicios"
 import Videos from "../../Homee/Videos"
-import BasicExample from "../../Navbar2/Navbar2"
-import Navbarrr2 from "../../Navbar2/Navbar2"
-import Navbar2 from "../../Navbar2/Navbar2"
+
+import Navbar2 from '../pages/Navbar2/Navbar2'
 
 
 function Home (){

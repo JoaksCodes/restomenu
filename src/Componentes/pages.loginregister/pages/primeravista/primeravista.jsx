@@ -1,5 +1,5 @@
-import Footer from "../../Footer/Footer"
-import Navbarrr from "./Navbarrr"
+import Footer from "../../../Footer/Footer"
+import Navbarrr from "../Navbarrr"
 import "./primeravista.css"
 import {  Link, Outlet, useLocation } from "react-router-dom"
 

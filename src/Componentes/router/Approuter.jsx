@@ -1,9 +1,9 @@
 import React from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Primeravista from '../pages.loginregister/pages/primeravista'
+import Primeravista from '../pages.loginregister/pages/primeravista/primeravista'
 import Navbarrr from '../pages.loginregister/pages/Navbarrr'
-import Formulario from '../pages.loginregister/pages/formulario'
-import Registro from '../pages.loginregister/pages/registro'
+import Formulario from '../pages.loginregister/pages/formularioLogin/formulario'
+import Registro from '../pages.loginregister/pages/registro/registro'
 import { Navbar } from 'react-bootstrap';
 import PrivateRoute from '../router/privateRoute'
 import Home from '../pages.loginregister/pages/home';
@@ -29,13 +29,7 @@ const Approuter = () => {
 
 <Route path='registro' element={<Registro/>}    />
 
-<Route path='Sobrenosotros' element={
-
-
-<SobreNosotros/>
-
-
-}/>
+<Route path='Sobrenosotros' element={<SobreNosotros/>}/>
 
 
 {/* // y la home principal seria la pagina que la gente puede ver cuando ya se registro o logio */}

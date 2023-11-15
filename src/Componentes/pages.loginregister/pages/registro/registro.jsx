@@ -1,10 +1,10 @@
 import React from 'react'
 
 import { useNavigate } from 'react-router-dom';
-import { useForm } from './hook/useForm';
-import Footer from '../../Footer/Footer';
-import Navbarrr from './Navbarrr';
-import ("./formulario.css")
+import { useForm } from '../hook/useForm';
+import Footer from '../../../Footer/Footer';
+import Navbarrr from '../Navbarrr';
+import ("../formularioLogin/formulario.css")
 
 const Registro = () => {
 
@@ -29,7 +29,7 @@ e.preventDefault();
         replace: true,
         state: {
             logged:true,
-            name,
+            
         },
 
     });

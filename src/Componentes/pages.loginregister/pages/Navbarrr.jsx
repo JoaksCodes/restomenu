@@ -1,6 +1,7 @@
 import {  Link, Outlet, useLocation } from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import SobreNosotros from "../../SobreNosotros/SobreNosotros";
 
 const Navbarrr = () => {
 
@@ -13,8 +14,9 @@ const {state} = useLocation()
 
 
      <h1>
-     <Link to="/" >  <Container>
-          <Navbar.Brand href="#home">
+     <Link to="/" >  
+     <Container>
+          <Navbar.Brand href="">
             <img
               src="src/assets/assets.loginregister/img/logo.jpeg"
               width="80"
@@ -32,12 +34,11 @@ const {state} = useLocation()
    
 
       
-        {state?.logged ? (
+         {state?.logged ? (
         <div className="user">
+          
+          <Link to={SobreNosotros}>Sobre Nosotros</Link>
 
-          <span className="username">
-            {state?.name}
-           </span>
              <Link to="/"><button>Cerrar sesion</button></Link>
              </div>
 

@@ -2,13 +2,18 @@ import React from 'react'
 import './SobreNosotros.css'
 
 
-import Navbar2 from '../Navbar2/Navbar2'
+import Navbar2 from '../pages.loginregister/pages/Navbar2/Navbar2'
 import Footer from '../Footer/Footer'
 
 const SobreNosotros = () => {
+  OnresetForm();
   return (
     <>
-  <Navbar2/>
+ 
+ 
+
+
+
        <section>
       <div className="container">
         <h1 className="text-center">Sobre Nosotros</h1>
