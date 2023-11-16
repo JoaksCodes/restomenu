@@ -1,12 +1,13 @@
-.cardd {
+/* Estilos para la tarjeta */
+.tarjeta {
     display: flex;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
   
-  .cardd-img {
+  .tarjeta-imagen {
     width: 100px;
     height: 100px;
     object-fit: cover;
@@ -14,26 +15,28 @@
     margin-right: 10px;
   }
   
-  .cardd-contenido {
+  .tarjeta-contenido {
     flex: 1;
   }
   
-  .card-titulo {
+  .tarjeta-titulo {
     margin: 0;
   }
   
-  .cardd-description {
+  .tarjeta-descripcion {
     margin: 0;
     margin-bottom: 10px;
+    margin-top: 3px;
   }
   
-  .cardd-price {
+  .tarjeta-precio {
     margin: 0;
     font-weight: bold;
   }
   
-  .boton-add {
+  .boton-agregar {
     background-color: #4caf50;
+    margin-top: 3px;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -41,10 +44,10 @@
     cursor: pointer;
   }
   
-  .boton-add:hover {
+  .boton-agregar:hover {
     background-color: #45a049;
   }
-  .boton-delete {
+  .boton-quitar {
     background-color: #af4c4c;
     color: white;
     border: none;
@@ -53,7 +56,7 @@
     cursor: pointer;
   }
   
-  .boton-delete:hover {
+  .boton-quitar:hover {
     background-color: #a04545;
   }
   
@@ -63,3 +66,4 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  

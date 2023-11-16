@@ -1,0 +1,41 @@
+.fondo-lista{
+    background-image: url('https://images.unsplash.com/photo-1495195129352-aeb325a55b65?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .lista-compra {
+      width: 80%;
+      margin: 0 auto;
+    }
+    
+    .item-compra {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .item-compra p {
+      flex: 1;
+      margin: 0;
+    }
+    
+    .item-compra input {
+      width: 50px;
+      margin-right: 10px;
+    }
+    
+    .item-compra button {
+      background-color: #ff5252;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .item-compra button:hover {
+      background-color: #ff1744;
+    }
+    

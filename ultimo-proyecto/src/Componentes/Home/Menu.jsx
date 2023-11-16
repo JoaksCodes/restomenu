@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
+import { NavLink } from 'react-router-dom';
 import './Menu.css'
 
 
@@ -23,7 +24,7 @@ const Menu = () => {
               <div className="card-body">
                 <h5 className="card-title">Platos Calientes</h5>
                 <p className="card-text">Comida</p>
-                <Button variant="dark"><a href="/FoodPage">ver mas</a></Button>
+                <Button variant="dark"><NavLink to='/ComprasPage' className={"text-decoration-none text-white"}>Ver mas</NavLink ></Button>
               </div>
             </div>
           </div>
@@ -37,7 +38,7 @@ const Menu = () => {
               <div className="card-body">
                 <h5 className="card-title">Platos Frios</h5>
                 <p className="card-text">Comida</p>
-                <Button variant="dark">Ver mas</Button>
+                <Button variant="dark"><NavLink to='/ComprasPage#platosFrios' className={"text-decoration-none text-white"}>Ver mas</NavLink ></Button>
               </div>
             </div>
           </div>

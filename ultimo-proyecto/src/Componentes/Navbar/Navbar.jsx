@@ -1,9 +1,8 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Badge } from '@mui/material';
-import { ShoppingCart } from '@mui/icons-material';
+import BotonCarrito from '../CarritoAni/Boton/BotonCarrito'
+import { NavLink } from 'react-router-dom';
 
 function BasicExample() {
   return (
@@ -16,11 +15,9 @@ function BasicExample() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/SobreNosotros">Sobre Nosotros</Nav.Link>
           </Nav>
-          <Nav.Link href='/Carrito'>
-          <Badge badgeContent={4} color="success">
-            <ShoppingCart color="action" />
-          </Badge>
-          </Nav.Link>
+          <NavLink to='/Carrito'>
+            <BotonCarrito/>
+          </NavLink>
 
         </Navbar.Collapse>
       </Container>
