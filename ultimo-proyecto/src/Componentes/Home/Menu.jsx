@@ -38,7 +38,7 @@ const Menu = () => {
               <div className="card-body">
                 <h5 className="card-title">Platos Frios</h5>
                 <p className="card-text">Comida</p>
-                <Button variant="dark"><NavLink to='/ComprasPage#platosFrios' className={"text-decoration-none text-white"}>Ver mas</NavLink ></Button>
+                <Button variant="dark">Ver mas</Button>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Routes, Route, Router } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Presentacion from './Componentes/Home/Presentacion';
 import Navbar from './Componentes/Navbar/Navbar';
 import Franquicia from './Componentes/Home/Franquicia';
