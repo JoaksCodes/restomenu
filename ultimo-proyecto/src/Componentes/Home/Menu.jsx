@@ -19,7 +19,7 @@ const Menu = () => {
               <img
                 className="card-img-top"
                 src="../src/assets/comida1.jpg"
-                alt="Imagen 1"
+                alt="Imagen 1 "
               />
               <div className="card-body">
                 <h5 className="card-title">Platos Calientes</h5>
