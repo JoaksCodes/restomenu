@@ -1,12 +1,13 @@
 import React from 'react'
 import './SobreNosotros.css'
 import Footer from '../Footer/Footer'
+import Navbarrr from '../Navbar1/Navbar1'
 
 function Sobrenosotros  () {
 
   return (
     <>
-
+<Navbarrr/>
        <section >
       <div className="container">
         <h1 className="text-center">Sobre Nosotros</h1>

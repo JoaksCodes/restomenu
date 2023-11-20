@@ -12,9 +12,9 @@ const {state} = useLocation()
 
 
       <header>
+      <nav>
 
-
-     <h1>
+   <h1>
      <Link to="/" >  <Container>
           <Navbar.Brand href="#home">
             <img
@@ -34,23 +34,21 @@ const {state} = useLocation()
    
         {state?.logged ? (
         <div className="user">
-
-             <Link to="/"><button>Cerrar sesion</button></Link>
-             </div>
+         <Link to="/sobrenosotros">Sobre Nosotros</Link>
+         <Link to="/"><button>Cerrar sesion</button></Link>
+        </div>
 
         ): (
 
-          <nav>
-      
-                <Link to="/Login" className="btn-iniciar">Iniciar sesion</Link>
-                        <Link to="/registro" className="btn-iniciar">Registrarse</Link>
-
-                        </nav>
+          <div>
+          <Link to="/Login" className="btn-iniciar">Iniciar sesion</Link>
+          <Link to="/registro" className="btn-iniciar">Registrarse</Link>
+          </div>                
         
         )}
       
 
-        
+      </nav>  
       </header>
       
       <Outlet/>
