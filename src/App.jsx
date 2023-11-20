@@ -1,8 +1,19 @@
 import './App.css'
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
-import Approuter from './Componentes/router/Approuter';
-
+ import 'bootstrap/dist/css/bootstrap.min.css';
+ import { Route, Routes,  } from 'react-router';
+ import { BrowserRouter } from 'react-router-dom'
+ import Primeravista from './Componentes/PrimeraVista/primeravista';
+ import Formulario from './Componentes/Login/formulario';
+ import Registro from './Componentes/registro/registro';
+ import PrivateRoute from './Componentes/router/privateRoute';
+import Presentacion from './Componentes/Homee/Presentacion';
+import Videos from './Componentes/Homee/Videos';
+import Franquicia from './Componentes/Homee/Franquicia';
+import Menu from './Componentes/Homee/Menu';
+import Servicios from './Componentes/Homee/Servicios';
+import SobreNosotros from './Componentes/SobreNosotros/SobreNosotros'
+import Footer from './Componentes/Footer/Footer';
+import Navbarrr from './Componentes/Navbar1/Navbar1';
 
 
 function App() {
@@ -10,46 +21,77 @@ function App() {
   return (
     <>
 
+<Routes>
+ 
+
+<Route >
 
 
-<div>
+{/* //La primera vista seria la pagina q uno ve si no esta logiado ni registrado */}
+<Route index element={<Primeravista/>} />
 
-{/* <Admi/> */}
+<Route path='login' element={<Formulario/>}    />
 
+<Route path='registro' element={<Registro/>}    />
 
-<Approuter/> 
-</div>
-
-
-    {/* <BrowserRouter>
+<Route path='Sobrenosotros' element={<SobreNosotros/>}/>
 
 
+{/* // y la home principal seria la pagina que la gente puede ver cuando ya se registro o logio */}
+<Route path='Homeprincipal' element={
+  
+  <PrivateRoute>
+   <Navbarrr/>
+   <Presentacion/>
+<Videos/>
+<Franquicia/>
+<Menu/>
+<Servicios/>
+    <Footer/>
+    
+  </PrivateRoute>
 
+}    />
 
+</Route>
 
-
-
-    <Navbar/>
-    <Routes>
-
-      <Route path='/' element = {
-        <> 
-      <Presentacion/>
-      <Videos/>
-      <Franquicia/>
-      <Menu/>
-      <Servicios/>
-      </>
-      }></Route>
-      <Route path='/SobreNosotros' element={<SobreNosotros/>} ></Route>
-
-    </Routes>
-    <Footer/> 
-
-    </BrowserRouter> */}
-     
+   </Routes>
+   
+   
     </>
   )
 }
 
 export default App
+
+
+
+
+
+
+
+   {/* <BrowserRouter>
+
+    <ContainerOutsideExample/>
+
+    <Routes>
+
+      <Route path='/' element = {
+
+<> 
+<Presentacion/>
+<Videos/>
+<Franquicia/>
+<Menu/>
+<Servicios/>
+</>
+ }/>
+
+
+      <Route path='/SobreNosotros' element={<SobreNosotros/>} /> 
+
+    </Routes>
+
+    <Footer/> 
+
+    </BrowserRouter>  */}

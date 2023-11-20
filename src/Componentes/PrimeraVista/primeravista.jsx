@@ -1,6 +1,6 @@
-import Footer from "../../../Footer/Footer"
-import Navbarrr from "../Navbarrr"
-import "./primeravista.css"
+import Footer from "../Footer/Footer"
+import Navbarrr from "../Navbar1/Navbar1"
+import '../PrimeraVista/primeravista.css'
 import {  Link, Outlet, useLocation } from "react-router-dom"
 
 function  primeravista ( ) {
@@ -12,7 +12,7 @@ function  primeravista ( ) {
 
 <main>
   
-<Navbarrr/>
+ <Navbarrr /> 
 
 
 <section>

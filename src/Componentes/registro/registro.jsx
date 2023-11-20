@@ -1,10 +1,10 @@
 import React from 'react'
 
 import { useNavigate } from 'react-router-dom';
-import { useForm } from '../hook/useForm';
-import Footer from '../../../Footer/Footer';
-import Navbarrr from '../Navbarrr';
-import ("../formularioLogin/formulario.css")
+import { useForm } from '../Login/useForm'
+import Footer from '../Footer/Footer';
+import Navbarrr from '../Navbar1/Navbar1';
+import '../Login/formulario.css'
 
 const Registro = () => {
 
@@ -37,8 +37,8 @@ const onregister =(e)=>
   return (
 
         <>
-
-        <Navbarrr/>
+ <Navbarrr/> 
+        
         <section className='secformu'>
 
             <div className="contenedorformu">

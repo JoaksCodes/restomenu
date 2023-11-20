@@ -1,13 +1,11 @@
- import {useForm} from '../hook/useForm'
-
-import { useState } from "react";
-import ("./formulario.css")
+import {useForm} from './useForm'
+import './formulario.css'
  import {  useNavigate } from "react-router-dom";
-//  import React, { useState } from "react";
- import Footer from '../../../Footer/Footer';
- import Navbarrr from '../Navbarrr';
- import { Container, Form} from 'react-bootstrap';
-import Usertable from '../tableusuarios';
+ import Navbarrr from '../Navbar1/Navbar1';
+ import Footer from '../Footer/Footer';
+ import  ContainerOutsideExample from '../Navbar1/Navbar1'
+import { Container, Form} from 'react-bootstrap';
+
 
 
 
@@ -38,7 +36,7 @@ function Formulario ({  }) {
 
     return (
         <>
-        <Navbarrr/>
+         < Navbarrr/> 
 
         <section className="secformu">
 
