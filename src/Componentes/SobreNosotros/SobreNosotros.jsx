@@ -4,12 +4,13 @@ import Footer from '../Footer/Footer'
 import Navbarrr from '../Navbar1/Navbar1'
 import {  Link, Outlet, useLocation } from "react-router-dom"
 
+
 function Sobrenosotros  () {
 
 
   return (
     <>
-<Navbarrr/>
+
 
        <section >
       <div className="container">

@@ -34,8 +34,8 @@ const {state} = useLocation()
    
         {state?.logged ? (
         <div className="user">
-         <Link to="/sobrenosotros">Sobre Nosotros</Link>
-         <Link to="/"><button>Cerrar sesion</button></Link>
+         <Link to="/sobrenosotros" className="btn-iniciar">Sobre Nosotros</Link>
+         <Link to="/" className="btn-iniciar">Cerrar sesion</Link>
         </div>
 
         ): (
