@@ -81,7 +81,19 @@ function Sobrenosotros  () {
               </div>
             </div>
           </div>
-      
+          <div className="col-12 col-md-6 col-lg-4 mb-3">
+            <div className="card">
+              <img
+                className="card-img-top"
+                src="../src/assets/ivan-foto.jpg"
+                alt="Imagen 5"
+              />
+              <div className="card-body">
+                <h5 className="card-title">Ivan Leguizamon</h5>
+                <p className="card-text">Desarrollador full stack</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
