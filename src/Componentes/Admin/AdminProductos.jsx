@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import { Modal, ModalBody, ModalFooter, ModalHeader, Navbar } from 'reactstrap';
 import axios from 'axios';
 import '../Admin/AdminProductos.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import Navbarrr from '../Home/Navbar';
 
 const Admin = () => {
     //Direccion url de la Api
@@ -126,6 +127,8 @@ const Admin = () => {
   
 
   return (
+<>
+<Navbarrr/>
     <div className='fondoAdmin'>
         <br/>
         <button className="btn btn-success platosBoton" onClick={()=>{setPlatosForm(null),setModalType('crear'),toggleModal()}}>Agregar Plato</button>
@@ -223,6 +226,7 @@ const Admin = () => {
             </ModalFooter>
         </Modal>
     </div>
+</>
   )
 }
 

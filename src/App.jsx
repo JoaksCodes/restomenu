@@ -4,7 +4,6 @@
  import Primeravista from './Componentes/PrimeraVista/primeravista';
 import Login from './Componentes/login/Login'
 import Registro from './Componentes/registro/Registro';
- import PrivateRoute from './Componentes/router/privateRoute';
 import Presentacion from './Componentes/Home/Presentacion';
 import Videos from './Componentes/Home/Videos';
 import Franquicia from './Componentes/Home/Franquicia';
@@ -48,8 +47,8 @@ function App() {
 
 {/* // y la home principal seria la pagina que la gente puede ver cuando ya se registro o logio */}
 <Route path='Homeprincipal' element={
+  <>
   
-  <PrivateRoute>
    <Navbar/>
   
    <Presentacion/>
@@ -59,7 +58,7 @@ function App() {
 <Servicios/>
     <Footer/>
     
-  </PrivateRoute>
+</>
 
 }    />
 
@@ -79,29 +78,3 @@ export default App
 
 
 
-
-   {/* <BrowserRouter>
-
-    <ContainerOutsideExample/>
-
-    <Routes>
-
-      <Route path='/' element = {
-
-<> 
-<Presentacion/>
-<Videos/>
-<Franquicia/>
-<Menu/>
-<Servicios/>
-</>
- }/>
-
-
-      <Route path='/SobreNosotros' element={<SobreNosotros/>} /> 
-
-    </Routes>
-
-    <Footer/> 
-
-    </BrowserRouter>  */}

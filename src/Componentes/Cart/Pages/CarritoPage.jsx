@@ -9,8 +9,8 @@ const CarritoPage = () => {
   return (
     <>
 <section className="fondo-lista">
-    <h4>Lista de Compras</h4>
-    <hr />
+
+    
 
     <ListaCompras></ListaCompras>
     </section>
