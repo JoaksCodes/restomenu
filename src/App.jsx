@@ -3,8 +3,8 @@ import './App.css'
  import { Route, Routes,  } from 'react-router';
  import { BrowserRouter } from 'react-router-dom'
  import Primeravista from './Componentes/PrimeraVista/primeravista';
- import Formulario from './Componentes/Login/formulario';
- import Registro from './Componentes/registro/registro';
+import Login from './Componentes/login/Login'
+import Registro from './Componentes/registro/Registro';
  import PrivateRoute from './Componentes/router/privateRoute';
 import Presentacion from './Componentes/Homee/Presentacion';
 import Videos from './Componentes/Homee/Videos';
@@ -30,7 +30,7 @@ function App() {
 {/* //La primera vista seria la pagina q uno ve si no esta logiado ni registrado */}
 <Route index element={<Primeravista/>} />
 
-<Route path='login' element={<Formulario/>}    />
+<Route path='login' element={<Login/>}    />
 
 <Route path='registro' element={<Registro/>}    />
 
@@ -42,6 +42,7 @@ function App() {
   
   <PrivateRoute>
    <Navbarrr/>
+  
    <Presentacion/>
 <Videos/>
 <Franquicia/>

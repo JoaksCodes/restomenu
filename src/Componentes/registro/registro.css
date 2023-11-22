@@ -3,24 +3,23 @@
 
     margin: 0;
 }
-
-
 .secformu{
+
     display: flex;
     justify-content: center;
 align-items: center;
 width: 100%;
 min-height: 100vh;
-background-image: url(src/assets/assets.loginregister/img/photo-1533777857889-4be7c70b33f7.avif) ;
+background-image: url(src/assets/img/photo-1533777857889-4be7c70b33f7.avif) ;
 background-position: center;
 background-size: cover; 
 }
-
+ 
 .contenedorformu{
     position: relative;
-    
+    background-color: #000000;
     width: 400px;
-    backdrop-filter: blur(15px);
+     backdrop-filter: blur(15px); 
     border: 2px solid rgba(7, 6, 6, 0.6);
     border-radius:20px ;
     height:  auto;
@@ -29,16 +28,6 @@ background-size: cover;
     align-items: center;
     font-style: oblique;
 }
-
-.contenedorformu h2 {
-
-    font-size: 2.3rem;
-    color: #fff;
-    text-align: center;
-
-
-}
-
 .input-contenedor{
     position: relative;
     margin: 30px 0;
@@ -71,61 +60,52 @@ background-size: cover;
 }
  .input-contenedor i{
     position: absolute;
-    color: #d61d1d;
+    color: #000000;
     font-size: 1.6rem;
     top: 19px;
     right: 8px;
 
  }
 
- h2{
+ .inicia{
     margin: 15px 3px;
+    color: #fff;
  }
+
+
  
- button{
-    width: 80%;
-    margin: 15px  25px;
-    height: 45px;
-    background: #fff;
-    border-radius: 40px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: .4s;
+button{
+   width: 80%;
+   margin: 15px  25px;
+   height: 35px;
+   background: #fff;
+   border: none;
+   font-weight: bold;
+   cursor: pointer;
+   font-size: 1rem;
+   transition: .4s;
 
- }
- button:hover{
-    opacity: .9;
+}
+button:hover{
+   opacity: .9;
 
- }
-
- .registar{
-    font-size: .8rem;
-    color: #fff;
-    text-align: center;
-
-margin: 20px 0 10px;}
-
-.registar p a{
+}
+ 
+ 
+ 
+.forgot-pass{
+    margin: 15px 0 15px;
+    
+   }
+  
+   .forgot-pass a{
+    color: rgb(255, 255, 255);
+    font-size: 14px;
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: .3s;
-
-}
-
-.registar p a:hover{
+   }
+  
+  .forgot-pass a:hover{
     text-decoration: underline;
-}
-.buton2{
-    width: 50%;
-    height: 25px;
-    background: #ffffff;
-    border-radius: 40px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: .4s;
-}
+    transition: .8s ease;
+  }
+ 

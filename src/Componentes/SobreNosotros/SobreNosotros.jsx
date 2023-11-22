@@ -11,7 +11,7 @@ function Sobrenosotros  () {
   return (
     <>
 
-
+ <Navbarrr/>
        <section >
       <div className="container">
         <h1 className="text-center">Sobre Nosotros</h1>
