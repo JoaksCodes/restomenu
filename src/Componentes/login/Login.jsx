@@ -2,43 +2,47 @@ import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import { Link } from "react-router-dom";
+import {login} from "../helpers";
+import { Link, useNavigate } from "react-router-dom";
 import './login.css'
-import Navbarrr from "../Navbar1/Navbar1";
+import Navbar from "../Home/Navbar";
 
 
 const Login = () => {
     const [datosEnviados, cambiarDatosEnviados] = useState(false);
+    const navigate = useNavigate()
     return (
         <>
-        <Navbarrr/>
+        <Navbar/>
             <Formik
                 initialValues={{
-                    usuario: '',
-                    contraseña: ''
+                    correo: '',
+                    password: ''
                 }}
                 validate={(valores) => {
                     let errores = {};
 
-                    if (!valores.usuario) {
-                        errores.usuario = 'Por favor ingrese el usuario.'
-                    } else if (!/^[A-Za-z0-9]{4,20}\S+$/g.test(valores.usuario)) {
-                        errores.usuario = 'El usuario solo puede tener letras y numeros.'
+                    if (!valores.correo) {
+                        errores.usuario = 'Por favor ingrese el correo electronico.'
+                    } else if (!/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/g.test(valores.correo)) {
+                        errores.correo = 'No es un correo electronico valido.'
                     }
 
-                    if (!valores.contraseña) {
-                        errores.contraseña = 'Por favor ingrese la contraseña.'
-                    } else if (!/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/g.test(valores.contraseña)) {
-                        errores.contraseña = 'La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.'
-                    }
+                    // if (!valores.password) {
+                    //     errores.password = 'Por favor ingrese la contraseña.'
+                    // } else if (!/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/g.test(valores.contraseña)) {
+                    //     errores.password = 'La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.'
+                    // }
 
                     return errores;
                 }}
                 onSubmit={(valores, { resetForm }) => {
                     let usuarioRegistrado = valores;
                     resetForm();
+                    login(usuarioRegistrado);
                     console.log('Formulario enviado');
                     console.log(usuarioRegistrado);
+                    navigate('/Homeprincipal');
                     cambiarDatosEnviados(true);
                     setTimeout(() => cambiarDatosEnviados(false), 5000)
                 }}
@@ -59,30 +63,30 @@ const Login = () => {
                                 <h2 className="inicia">Inicia sesion</h2>
 
                                 <div className="input-contenedor">
-                                    <input
-                                        id="usuario"
+                                    <Field
+                                        id="correo"
                                         type="text"
-                                        name="usuario"
-                                        placeholder="Usuario"
+                                        name="correo"
+                                        placeholder="Email"
                                     />
-                                    <label htmlFor="usuario"></label>
+                                    <label htmlFor="correo"></label>
 
-                                    <ErrorMessage name="usuario" component={() => (
-                                        <div className="error">{errors.usuario}</div>
+                                    <ErrorMessage name="correo" component={() => (
+                                        <div className="error">{errors.correo}</div>
                                     )} />
                                 </div>
 
 
                                 <div className="input-contenedor">
-                                    <input
-                                        id="contraseña"
+                                    <Field
+                                        id="password"
                                         type="password"
-                                        name="contraseña"
+                                        name="password"
                                         placeholder="Contraseña"
                                     />
-                                    <label htmlFor="contraseña"></label>
-                                    <ErrorMessage name="contraseña" component={() => (
-                                        <div className="error text-center">{errors.contraseña}</div>
+                                    <label htmlFor="password"></label>
+                                    <ErrorMessage name="password" component={() => (
+                                        <div className="error text-center">{errors.password}</div>
                                     )} />
                                 </div>
 

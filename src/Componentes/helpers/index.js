@@ -1,6 +1,3 @@
-const URL_productos = import.meta.env.VITE_ENV_URL_PRODUCTS;
-const URL_usuarios = import.meta.env.VITE_ENV_URL_USERS;
-
 import axios from 'axios';
 
 export const methPost= async(obj)=>{
@@ -14,7 +11,7 @@ export const methPost= async(obj)=>{
 export const methPostUsers= async(obj)=>{
     obj.admin=false;
     try {
-        axios.post(URL_usuarios + "/createUser",obj)
+        await axios.post(`https://spring-roll.onrender.com/api/usuarios/createUser`,obj)
     } catch (error) {
         console.log(error);
     }
@@ -29,7 +26,7 @@ export const methoGetOne=(id)=>{
 }
 export const methoGetOneUser=(id)=>{
     try {
-        let usuario =axios.get(`${URL_usuarios}//getOneUser/${id}`)
+        let usuario =axios.get(`https://spring-roll.onrender.com/api/usuarios/getOneUser/${id}`)
         return usuario;
     } catch (error) {
         console.log(error);
@@ -55,16 +52,15 @@ export const  methGetUsers=async()=>{
     }
 }
 
-export const ingresar=async(user)=>{
-    let users = await methGetUsers();
-    let objs = users.data;
-    let myUser = objs.filter((obj)=>{
-        if(obj.email===user.email && obj.password===user.password){
-            return obj;
-        }
-    })
-    return myUser;
+export const login = async (obj) => {
+    try {
+        await axios.post("https://spring-roll.onrender.com/api/auth/login",obj)
+    
+    } catch (error) {
+        console.log(error);
+    }
 }
+
 
 export const methoDeleteOne=(id)=>{
     try {

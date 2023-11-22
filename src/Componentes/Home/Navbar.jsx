@@ -1,6 +1,7 @@
 import {  Link, Outlet, useLocation } from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import BotonCarrito from '../Cart/Boton/BotonCarrito'
 
 const Navbarrr = () => {
 
@@ -36,6 +37,7 @@ const {state} = useLocation()
         <div className="user">
          <Link to="/sobrenosotros" className="btn-iniciar">Sobre Nosotros</Link>
          <Link to="/" className="btn-iniciar">Cerrar sesion</Link>
+         <Link to= "/carrito" className="btn-inciar"><BotonCarrito/></Link>
         </div>
 
         ): (
@@ -43,6 +45,8 @@ const {state} = useLocation()
           <div>
           <Link to="/Login" className="btn-iniciar">Iniciar sesion</Link>
           <Link to="/registro" className="btn-iniciar">Registrarse</Link>
+          <Link to= "/carrito"><BotonCarrito/></Link>
+
           </div>                
         
         )}

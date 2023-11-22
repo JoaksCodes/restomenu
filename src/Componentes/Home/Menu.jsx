@@ -1,9 +1,11 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
+import { NavLink } from 'react-router-dom';
 import './Menu.css'
 
 
 const Menu = () => {
+  
   return (
     <>
     <section className="image-fondo">
@@ -17,12 +19,12 @@ const Menu = () => {
               <img
                 className="card-img-top"
                 src="../src/assets/comida1.jpg"
-                alt="Imagen 1"
+                alt="Imagen 1 "
               />
               <div className="card-body">
-                <h5 className="card-title">Comida 1</h5>
+                <h5 className="card-title">Platos Calientes</h5>
                 <p className="card-text">Comida</p>
-                <Button variant="dark">Ver mas</Button>
+                <Button variant="dark"><NavLink to='/ComprasPage' className={"text-decoration-none text-white"}>Ver mas</NavLink ></Button>
               </div>
             </div>
           </div>
@@ -34,9 +36,9 @@ const Menu = () => {
                 alt="Imagen 2"
               />
               <div className="card-body">
-                <h5 className="card-title">Comida 2</h5>
+                <h5 className="card-title">Platos Frios</h5>
                 <p className="card-text">Comida</p>
-                <Button variant="dark">Ver mas</Button>
+                <Button variant="dark"><NavLink to='/ComprasPage#platosFrios' className={"text-decoration-none text-white"}>Ver mas</NavLink ></Button>
               </div>
             </div>
           </div>
@@ -48,9 +50,9 @@ const Menu = () => {
                 alt="Imagen 3"
               />
               <div className="card-body">
-                <h5 className="card-title">Comida 3</h5>
+                <h5 className="card-title">Postres</h5>
                 <p className="card-text">Comida</p>
-                <Button variant="dark">Ver mas</Button>
+                <Button variant="dark"><NavLink to='/ComprasPage#postres' className={"text-decoration-none text-white"}>Ver mas</NavLink ></Button>
               </div>
             </div>
           </div>

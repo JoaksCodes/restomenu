@@ -1,53 +1,57 @@
 import { useState } from "react";
-import { Formik, Form, ErrorMessage } from "formik";
+import { Formik, Form, ErrorMessage, Field } from "formik";
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import { methPost } from "../helpers";
+import { methPostUsers } from "../helpers";
 import { Link } from "react-router-dom";
-import Navbarrr from "../Navbar1/Navbar1";
+import Navbarrr from "../Home/Navbar";
 
 const Registro = () => {
     const [datosEnviados, cambiarDatosEnviados] = useState(false);
+
+
     return (
         <>
         <Navbarrr/>
             <Formik
                 initialValues={{
-                    usuario: '',
+                    nombre: '',
+                    apellido: '',
                     correo: '',
-                    contraseña: ''
+                    password: ''
                 }}
-                validate={(valores) => {
-                    let errores = {};
+                // validate={(valores) => {
+                //     let errores = {};
+                //     if(!valores.nombre){
+                //         errores.nombre = 'Por favor ingrese un nombre'
+                //     }
+                //     if(!valores.apellido){
+                //         errores.apellido = 'Por favor ingrese un apellido'
+                //     }
 
-                    if (!valores.usuario) {
-                        errores.usuario = 'Por favor ingrese el usuario.'
-                    } else if (!/^[A-Za-z0-9]{4,20}\S+$/g.test(valores.usuario)) {
-                        errores.usuario = 'El usuario solo puede tener letras y numeros y debe tener entre 4 y 20 caracteres.'
-                    }
+                //     if (!valores.correo) {
+                //         errores.correo = 'Por favor ingrese el correo electronico.'
+                //     } else if (!/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/g.test(valores.correo)) {
+                //         errores.correo = 'No es un correo electronico valido.'
+                //     }
 
-                    if (!valores.correo) {
-                        errores.correo = 'Por favor ingrese el correo electronico.'
-                    } else if (!/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/g.test(valores.correo)) {
-                        errores.correo = 'No es un correo electronico valido.'
-                    }
+                //     if (!valores.contraseña) {
+                //         errores.contraseña = 'Por favor ingrese la contraseña.'
+                //     } else if (!/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/g.test(valores.contraseña)) {
+                //         errores.contraseña = 'La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.'
+                //     }
 
-                    if (!valores.contraseña) {
-                        errores.contraseña = 'Por favor ingrese la contraseña.'
-                    } else if (!/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/g.test(valores.contraseña)) {
-                        errores.contraseña = 'La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.'
-                    }
-
-                    return errores;
-                }}
+                //     return errores;
+                // }}
                 onSubmit={(valores, { resetForm }) => {
-                    let usuarioRegistrado = valores;
                     resetForm();
-                    methPost(usuarioRegistrado);
+                    methPostUsers(valores);
                     cambiarDatosEnviados(true);
                     setTimeout(() => cambiarDatosEnviados(false), 5000)
                 }}
-            >
+                
+                
+                >
                 {({ errors }) => (
                 <section className="secformu">
 
@@ -60,21 +64,34 @@ const Registro = () => {
                             <Form className='loginForm text-center'>
                                 <h2 className="inicia"> Registrate</h2>
                                 <div className="input-contenedor">
-                                    <input
-                                        id="usuario"
+                                    <Field
+                                        id="nombre"
                                         type="text"
-                                        name="usuario"
-                                        placeholder="Usuario"
+                                        name="nombre"
+                                        placeholder="Nombre"
                                     />
-                                    <label htmlFor="usuario"></label>
-                                    <ErrorMessage name="usuario" component={() => (
-                                    <div className="error">{errors.usuario}</div>
+                                    <label htmlFor="nombre"></label>
+                                    <ErrorMessage name="nombre" component={() => (
+                                    <div className="error">{errors.nombre}</div>
+                                    )} />  
+                                </div>
+
+                                <div className="input-contenedor">
+                                    <Field
+                                        id="apellido"
+                                        type="text"
+                                        name="apellido"
+                                        placeholder="Apellido"
+                                    />
+                                    <label htmlFor="apellido"></label>
+                                    <ErrorMessage name="apellido" component={() => (
+                                    <div className="error">{errors.apellido}</div>
                                     )} />  
                                 </div>
 
 
                                 <div className="input-contenedor">
-                                    <input
+                                    <Field
                                         id="correo"
                                         type="text"
                                         name="correo"
@@ -88,25 +105,25 @@ const Registro = () => {
 
 
                                 <div className="input-contenedor">
-                                    <input
-                                        id="contraseña"
+                                    <Field
+                                        id="password"
                                         type="password"
-                                        name="contraseña"
+                                        name="password"
                                         placeholder="Contraseña"
                                     />
-                                    <label htmlFor="contraseña"></label>
-                                    <ErrorMessage name="contraseña" component={() => (
-                                    <div className="error text-center">{errors.contraseña}</div>
+                                    <label htmlFor="password"></label>
+                                    <ErrorMessage name="password" component={() => (
+                                    <div className="error text-center">{errors.password}</div>
                                     )} />
                                 </div>
 
                                 <Col className="forgot-pass">
-                                    <a className="boton" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Has olvidado tu contraseña?</a>
+                                    <p className="boton text-white" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Has olvidado tu contraseña?</p>
                                 </Col>
                                 <button type="submit" className="button">Registrarme</button>
-                                {datosEnviados && <p className="usuarioRegistrado">Te registraste con éxito!</p>}
+                                {datosEnviados && <p className="usuarioRegistrado text-white">Te registraste con éxito!</p>}
                                 <Col className="forgot-pass">
-                                    <p>Ya tienes una cuenta? <Link to={"/Login"} className="forgot-pass">Inicia Sesión</Link></p>
+                                    <p >Ya tienes una cuenta? <Link to={"/Login"} className="forgot-pass">Inicia Sesión</Link></p>
                                 </Col>                                      
                             </Form>
                         </div>
