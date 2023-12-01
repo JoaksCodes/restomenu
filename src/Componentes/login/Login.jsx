@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import {login} from "../helpers";
 import { Link, useNavigate } from "react-router-dom";
 import './login.css'
-import Navbar from "../Home/Navbar";
+import Navbarrr from "../Navbars/Navbar";
 
 
 const Login = () => {
@@ -13,7 +13,7 @@ const Login = () => {
     const navigate = useNavigate()
     return (
         <>
-        <Navbar/>
+        <Navbarrr/>
             <Formik
                 initialValues={{
                     correo: '',
@@ -22,17 +22,17 @@ const Login = () => {
                 validate={(valores) => {
                     let errores = {};
 
-                    if (!valores.correo) {
-                        errores.usuario = 'Por favor ingrese el correo electronico.'
-                    } else if (!/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/g.test(valores.correo)) {
-                        errores.correo = 'No es un correo electronico valido.'
-                    }
-
-                    // if (!valores.password) {
-                    //     errores.password = 'Por favor ingrese la contraseña.'
-                    // } else if (!/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/g.test(valores.contraseña)) {
-                    //     errores.password = 'La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.'
+                    // if (!valores.correo) {
+                    //     errores.usuario = 'Por favor ingrese el correo electronico.'
+                    // } else if (!/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/g.test(valores.correo)) {
+                    //     errores.correo = 'No es un correo electronico valido.'
                     // }
+
+                    //  if (!valores.password) {
+                    //      errores.password = 'Por favor ingrese la contraseña.'
+                    //  } else if (!/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/g.test(valores.contraseña)) {
+                    //      errores.password = 'La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.'
+                    //  }
 
                     return errores;
                 }}

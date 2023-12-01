@@ -1,8 +1,9 @@
 import React from 'react'
 import './SobreNosotros.css'
 import Footer from '../Footer/Footer'
-import Navbar from '../Home/Navbar'
+
 import {  Link, Outlet, useLocation } from "react-router-dom"
+import NavbarLog from '../Navbars/NavbarLog'
 
 
 function Sobrenosotros  () {
@@ -11,7 +12,7 @@ function Sobrenosotros  () {
   return (
     <>
 
-  <Navbar/>
+  <NavbarLog/>
        <section >
       <div className="container">
         <h1 className="text-center">Sobre Nosotros</h1>

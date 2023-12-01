@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import { methPostUsers } from "../helpers";
 import { Link } from "react-router-dom";
-import Navbarrr from "../Home/Navbar";
+import Navbarrr from "../Navbars/Navbar";
 
 const Registro = () => {
     const [datosEnviados, cambiarDatosEnviados] = useState(false);

@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { CarritoContext } from "../Context/CarritoContext"
 import './Lista.css'
-import Navbar from "../../Home/Navbar"
+import Navbarrr from "../../Navbars/Navbar"
 
 const ListaCompras = () => {
     const { listaCompras, agregarCompra, eliminarCompra, aumentarCantidad, reducirCantidad } = useContext(CarritoContext)

@@ -13,7 +13,7 @@ body{
    
 }
   
-   nav{
+   .navnav{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,8 +23,9 @@ body{
   } 
   .btn-iniciar{
     text-decoration: none;
+    display: flex;
     color: aliceblue;
     margin: 12px;
   }
-  .naaav{ color: aliceblue;}
+  .navnav{ color: aliceblue;}
   

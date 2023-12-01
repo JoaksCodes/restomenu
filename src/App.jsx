@@ -11,7 +11,8 @@ import Menu from './Componentes/Home/Menu';
 import Servicios from './Componentes/Home/Servicios';
 import SobreNosotros from './Componentes/SobreNosotros/SobreNosotros'
 import Footer from './Componentes/Footer/Footer';
-import Navbar from './Componentes/Home/Navbar';
+import NavbarLog from './Componentes/Navbars/NavbarLog';
+import Navbarrr from './Componentes/Navbars/Navbar';
 import ListaCompras from './Componentes/Cart/ListaCompras/ListaCompra';
 import ProductosProvider from './Componentes/Cart/Context/ProductosProvider';
 import CarritoProvider from './Componentes/Cart/Context/CarritoProvider';
@@ -25,17 +26,19 @@ function App() {
 
   return (
     <>
-<ProductosProvider>
+
+    
+  <ProductosProvider>
   <CarritoProvider>
 
 <Routes>
  
 
-<Route >
+<Route > 
 
 
 {/* //La primera vista seria la pagina q uno ve si no esta logiado ni registrado */}
-<Route index element={<Primeravista/>} />
+ <Route index element={<Primeravista/>} />
 
 <Route path='/login' element={<Login/>}/>
 <Route path='/registro' element={<Registro/>}/>
@@ -43,13 +46,13 @@ function App() {
 <Route path='/ListaCompras' element={<ListaCompras/>}/>
 <Route path='/ComprasPage' element={<ComprasPage/>}/>
 <Route path='/Carrito' element={<CarritoPage/>}/>
-<Route path='/Admin' element={<Admin/>}/>
+<Route path='/Admin' element={<Admin/>}/> 
 
 {/* // y la home principal seria la pagina que la gente puede ver cuando ya se registro o logio */}
-<Route path='Homeprincipal' element={
+ <Route path='Homeprincipal' element={
   <>
   
-   <Navbar/>
+   <NavbarLog/>
   
    <Presentacion/>
 <Videos/>
@@ -60,14 +63,14 @@ function App() {
     
 </>
 
-}    />
+}    /> 
 
-</Route>
+ </Route>
 
    </Routes>
    </CarritoProvider>
-   </ProductosProvider>
-    </>
+   </ProductosProvider> 
+    </> 
   )
 }
 

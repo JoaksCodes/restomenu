@@ -4,7 +4,8 @@ import { ProductosContext } from "../../Cart/Context/ProductosContext";
 import { CarritoContext } from "../../Cart/Context/CarritoContext/";
 import './ComprasPage.css';
 import React from 'react';
-import Navbarrr from "../../Home/Navbar";
+import NavbarLog from "../../Navbars/NavbarLog";
+
 
 
 const ComprasPage = () => {
@@ -23,7 +24,7 @@ const ComprasPage = () => {
 
   return (
     <>
-    <Navbarrr/>
+    <NavbarLog/>
      <section className="fondoComprasPage">
       <hr />
       <h4 className="titulosPlatos" id="platosCalientes">PLATOS CALIENTES</h4>

@@ -3,7 +3,7 @@ import { Modal, ModalBody, ModalFooter, ModalHeader, Navbar } from 'reactstrap';
 import axios from 'axios';
 import '../Admin/AdminProductos.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import Navbarrr from '../Home/Navbar';
+import Navbarrr from '../Navbars/Navbar';
 
 const Admin = () => {
     //Direccion url de la Api

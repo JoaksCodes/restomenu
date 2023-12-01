@@ -1,5 +1,5 @@
 import Footer from "../Footer/Footer"
-import Navbarrr from "../Home/Navbar"
+import Navbarrr from "../Navbars/Navbar"
 import '../PrimeraVista/primeravista.css'
 import {  Link, Outlet, useLocation } from "react-router-dom"
 
@@ -18,8 +18,8 @@ function  primeravista ( ) {
 <section>
 
 
-<div class="container-xxl">
-<img src="src/assets/assets.loginregister/img/WhatsApp_Image_2023-10-24_at_1.54.37_PM-removebg-preview.png" class="img-fluid" alt="..."/>
+<div className="container-xxl">
+<img src="src/assets/assets.loginregister/img/WhatsApp_Image_2023-10-24_at_1.54.37_PM-removebg-preview.png" className="img-fluid" alt="..."/>
  
  <p>
  ¡Disfruta de un Brunch único  con ingredientes frescos, orgánicos y de alta calidad!
